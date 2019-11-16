@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CJP Clients</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" action="mysqlform.php" method="POST">
+				<span class="contact100-form-title">
+					Fichier Client
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Saisir un Numéro de Dossier">
+					<input class="input100" type="text" name="numdoss" placeholder="Numéro Dossier" id="Numdoss">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Saisir un Nom">
+					<input class="input100" type="text" name="nom" placeholder="Nom" id="Nom">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Saisir un Prenom">
+					<input class="input100" type="text" name="prenom" placeholder="Prénom" id="Prenom">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Selectionner un Type D'opération">
+					<input class="input100" type="text" name="operation" placeholder="Opération" id="Operation">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Selectionner un Type D'Usage">
+					<input class="input100" type="text" name="usage" placeholder="Usage" id="Usage">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100">
+					<textarea class="input100" name="message" placeholder="Commentaire"></textarea id="Commentaire">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-check-box-all">
+					<div class="switch_box box_1 label">
+						<input type="checkbox" class="switch_1" id="Salarie">
+						<label>Salarié</label>
+					</div>			
+					<div class="switch_box box_1 label">
+						<input type="checkbox" class="switch_1" id="Nonsalarie">
+						<label>Non-Salarié</label>
+					</div>			
+					<div class="switch_box box_1 label">
+						<input type="checkbox" class="switch_1" id="Frontalier">
+						<label>Frontalier</label>
+					</div>			
+				</div>
+				<div class="container-contactall-form-btn">
+					<div class="container-contact100-form-btn" id="Btnsearch" name=btnsearch>
+						<button class="contact100-form-btn">
+							<span>
+								<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+								Rechercher
+							</span>
+						</button>
+					</div>
+					<div class="container-contact100-form-btn">
+						<button class="contact100-form-btn" id="Btnupdate" name=btnupdate>
+							<span>
+								<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+								Modifier
+							</span>
+						</button>
+					</div>
+					<div class="container-contact100-form-btn">
+						<button class="contact100-form-btn" id="Btnsave" name=btnsave>
+							<span>
+								<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+								Enregistrer
+							</span>
+						</button>
+					</div>
+				</div>	
+			</form>
+		</div>
+    </div>
+
+<!--===============================================================================================-->
+<script src="jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+<!--===============================================================================================-->
+
+</body>
+</html>
