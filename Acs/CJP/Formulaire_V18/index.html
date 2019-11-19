@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V18</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		
+        <form class="contact100-form validate-form" action="mysqlform.php" method="POST">
+            <span class="contact100-form-title">
+                Fichier Clients
+            </span>
+
+
+            <div class="wrap-input100 validate-input" data-validate="Saisir un Numéro de Dossier">
+                <label class="label-input100" for="name">Numdoss</label>
+                <input id="numdoss" class="input100" type="text" name="numdoss" placeholder="Numéro de Dossier">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100">
+                <div class="label-input100" name=nomcollabo>Collaborateur</div>
+                <div>
+                    <select class="js-select2" name="service">
+                        <option>Selectionner...</option>
+                        <option value="">--Please choose an option--</option>
+							<?php
+							include "test_liste_deroulante.php";
+							?>
+                    </select>
+                    <div class="dropDownSelect2"></div>
+                </div>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Saisir un Nom">
+                <label class="label-input100" for="name">nom</label>
+                <input id="nom" class="input100" type="text" name="nom" placeholder="Nom">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100 validate-input" data-validate="Saisir un Prénom">
+                <label class="label-input100" for="name">prenom</label>
+                <input id="prenom" class="input100" type="text" name="prenom" placeholder="Prénom">
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100">
+                <div class="label-input100" name="operation">Type d'Opération</div>
+                <div>
+                    <select class="js-select2" name="service">
+                        <option>Selectionner...</option>
+                        <option>UI/UX Design</option>
+                        <option>eCommerce Bussiness</option>
+                        <option>Online Services</option>
+                    </select>
+                    <div class="dropDownSelect2"></div>
+                </div>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="wrap-input100">
+                <div class="label-input100" name="usage">Type d'Usage</div>
+                <div>
+                    <select class="js-select2" name="service">
+                        <option>Selectionner...</option>
+                        <option>UI/UX Design</option>
+                        <option>eCommerce Bussiness</option>
+                        <option>Online Services</option>
+                    </select>
+                    <div class="dropDownSelect2"></div>
+                </div>
+                <span class="focus-input100"></span>
+            </div>
+
+            <div class="container-check-box-all">
+                <div class="switch_box box_1 label">
+                    <input type="checkbox" class="switch_1" id="Salarie" name="checksalarie" value="1">
+                    <label>Salarié</label>
+                </div>			
+                <div class="switch_box box_1 label">
+                    <input type="checkbox" class="switch_1" id="Nonsalarie" name="checknonsalarie" value="1">
+                    <label>Non-Salarié</label>
+                </div>			
+                <div class="switch_box box_1 label">
+                    <input type="checkbox" class="switch_1" id="Frontalier" name="checkfrontalier" value="1">
+                    <label>Frontalier</label>
+                </div>			
+            </div>
+
+            <div class="container-contact100-form-btn">
+                <button class="contact100-form-btn">
+                    Enregistrer
+                </button>
+            </div>
+        </form>
+	</div>
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+		$(".js-select2").each(function(){
+			$(this).on('select2:open', function (e){
+				$(this).parent().next().addClass('eff-focus-selection');
+			});
+		});
+		$(".js-select2").each(function(){
+			$(this).on('select2:close', function (e){
+				$(this).parent().next().removeClass('eff-focus-selection');
+			});
+		});
+
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
